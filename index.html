@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="SUBZERO Game Club в Темиртау. PlayStation 5, игры и бронирование через WhatsApp.">
+<link rel="icon" href="logo.png" type="image/png">
+<title>SUBZERO — PlayStation-клуб в Темиртау</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{color-scheme:dark;--bg:#070913;--panel:#0d1221;--text:#f2f6ff;--muted:#a9b6ce;--ice:#87e4ff;--purple:#bb95ff;--line:#273449;--body:Inter,system-ui,sans-serif;--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:25px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--body)}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--ice);outline-offset:5px}
+p,h1,h2,h3{margin:0}
+.wrap{width:min(1180px,calc(100% - 80px));margin-inline:auto}
+.top{background:#070913;border-bottom:1px solid var(--line);position:relative;z-index:2}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.brand{display:inline-flex;align-items:center;gap:12px;font:italic 900 29px/.9 var(--display);letter-spacing:.025em}
+.brand small{display:block;font:700 9px/1.5 var(--body);letter-spacing:.24em;color:var(--ice);margin-top:5px}
+.mark{display:block;width:48px;height:48px;object-fit:contain;border-radius:50%;flex:none}
+nav{display:flex;gap:31px;color:var(--muted);font-size:.88rem;font-weight:600}
+nav a:hover,.text-link:hover{color:var(--ice)}
+.btn{min-height:48px;display:inline-flex;gap:12px;align-items:center;justify-content:center;padding:10px 19px;border:1px solid transparent;border-radius:5px;font-weight:800;font-size:.87rem;line-height:1.35;transition:background .18s,color .18s;white-space:nowrap}
+.btn.ice{background:var(--ice);color:#07101b}
+.btn.ice:hover{background:#c2f4ff}
+.btn.outline{border-color:#557487;background:#0a1221bb;color:var(--text)}
+.btn.outline:hover{background:#1d3042}
+.hero{display:grid;align-items:center;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 79% 50%,#122c60,#0a1227 47%,#080b16 75%);min-height:570px;border-bottom:1px solid var(--line)}
+.hero-image{position:absolute;z-index:-2;inset:0 0 0 auto;width:75%;height:100%;object-fit:cover;object-position:62% 58%}
+.hero:after{position:absolute;content:"";z-index:-1;inset:0;background:linear-gradient(90deg,#070913 4%,#070913f0 24%,#07091385 44%,transparent 67%),linear-gradient(0deg,#070913d9,transparent 30%)}
+.hero .wrap{padding-block:80px}
+.tag{display:flex;align-items:center;gap:9px;color:var(--ice);font-size:.75rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.tag:before{content:"";width:9px;height:9px;border:1px solid var(--ice);transform:rotate(45deg);box-shadow:0 0 14px #88e5ff80}
+h1{font:italic 900 clamp(5rem,12vw,10.2rem)/.83 var(--display);letter-spacing:-.04em;margin:12px 0 25px;color:#f5faff}
+.hero h2{font-size:clamp(1.45rem,3vw,2.05rem);line-height:1.15;letter-spacing:-.04em}
+.hero p{margin-top:12px;color:#c5d2e8;max-width:30ch}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.info a{padding:21px 28px;border-right:1px solid var(--line);display:flex;align-items:center;gap:14px;font-size:.9rem;font-weight:700}
+.info a:first-child{padding-left:0}
+.info a:last-child{border-right:0}
+.info a:hover{color:var(--ice)}
+.info span{color:var(--ice);font:italic 800 25px/1 var(--display)}
+.section{padding-block:72px}
+.section h2{font-size:clamp(2rem,5vw,3rem);line-height:1.12;letter-spacing:-.06em;margin-bottom:22px}
+.cards{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}
+.card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;min-height:190px;background:linear-gradient(145deg,#131d35,#0b101e 70%);border:1px solid var(--line);border-radius:8px;padding:24px}
+.card:nth-child(2){background:linear-gradient(145deg,#211a3b,#0b101e 72%)}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p,.contact p{color:var(--muted);font-size:.92rem}
+.text-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:18px;color:var(--ice);font-size:.88rem;font-weight:700}
+.hero-rating{display:inline-flex;align-items:center;gap:8px;min-height:36px;margin-top:13px;color:#c5d2e8;font-size:.83rem}
+.hero-rating:hover{color:var(--ice)}
+.hero-rating strong{color:var(--text)}
+.hero-rating span:first-child,.stars{color:#ffd282}
+.reviews{border-top:1px solid var(--line);background:#0a0e19}
+.review-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:23px}
+.review-heading h2{margin-bottom:8px}
+.review-rating{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:12px;color:var(--muted);font-size:.88rem}
+.review-rating strong{color:var(--text)}
+.stars{letter-spacing:.11em}
+.review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.review-card{display:flex;flex-direction:column;justify-content:space-between;gap:24px;margin:0;padding:23px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.review-card blockquote{margin:0;font-size:1rem}
+.review-card figcaption{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;color:var(--muted);font-size:.82rem}
+.review-card figcaption strong{color:var(--text)}
+@media(max-width:680px){.review-grid{grid-template-columns:1fr}.review-card{padding:17px}}
+.contact{background:linear-gradient(110deg,#131e38,#100d22 80%);border-block:1px solid var(--line)}
+.contact .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-block:40px}
+.contact h2{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.16;letter-spacing:-.045em;margin:8px 0}
+.contact .actions{margin-top:0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-block:25px;color:var(--muted);font-size:.8rem}
+footer a:hover{color:var(--ice)}
+@media(max-width:900px){.wrap{width:calc(100% - 48px)}.hero-image{width:86%}.hero{min-height:510px}nav{gap:16px}.cards{grid-template-columns:repeat(3,1fr)}.card{padding:17px}}
+@media(max-width:680px){.wrap{width:calc(100% - 32px)}.top .wrap{min-height:64px;gap:8px}nav{display:none}.brand{font-size:24px}.brand small{font-size:8px}.mark{width:42px;height:42px}.top .btn{padding-inline:12px;min-height:44px}.hero{min-height:620px;align-items:end}.hero-image{width:100%;height:68%;object-position:65% 52%}.hero:after{background:linear-gradient(0deg,#070913 4%,#070913 31%,#070913bd 49%,transparent 75%)}.hero .wrap{padding-block:36px}.hero h1{font-size:clamp(4.6rem,19vw,7.6rem);margin-bottom:15px}.actions{margin-top:23px}.info a{padding:12px 8px;font-size:.72rem;gap:5px;min-height:58px}.info span{font-size:18px}.section{padding-block:46px}.cards{grid-template-columns:1fr}.card{min-height:145px}}
+@media(max-width:360px){.hero h1{font-size:4.2rem}.hero .btn,.contact .btn{white-space:normal}.hero .actions,.contact .actions{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="SUBZERO, на главную"><img class="mark" src="logo.png" width="48" height="48" alt=""><span>SUBZERO<small>GAME CLUB</small></span></a>
+    <nav aria-label="Навигация"><a href="#games">Игры</a><a href="#rates">Цены</a><a href="#reviews">Отзывы</a><a href="#location">Как добраться</a></nav>
+    <a class="btn outline" href="https://wa.me/message/S4C2PEXGVIT2B1" target="_blank" rel="noopener">Бронь <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="home">
+  <section class="hero" aria-labelledby="title">
+    <img class="hero-image" src="hero.webp" alt="" fetchpriority="high">
+    <div class="wrap">
+      <div class="tag">PlayStation 5 · Темиртау</div>
+      <h1 id="title">SUBZERO</h1>
+      <h2>Твоя территория побед</h2>
+      <p>Собирай друзей, выбирай игру и бронируй время на PS5.</p>
+      <div class="actions">
+        <a class="btn ice" href="https://wa.me/message/S4C2PEXGVIT2B1" target="_blank" rel="noopener">Забронировать в WhatsApp <span aria-hidden="true">↗</span></a>
+        <a class="btn outline" href="#rates">Посмотреть цены</a>
+      </div>
+      <a class="hero-rating" href="#reviews"><span aria-hidden="true">★</span><strong>5,0</strong><span>в 2ГИС · 3 оценки</span></a>
+    </div>
+  </section>
+  <div class="wrap info">
+    <a href="#games"><span aria-hidden="true">PS5</span> Игры</a>
+    <a href="#rates"><span aria-hidden="true">₸</span> Прайс</a>
+    <a href="#location"><span aria-hidden="true">↗</span> 7 мкр, 50</a>
+  </div>
+  <section class="wrap section" aria-labelledby="play">
+    <h2 id="play">Перед визитом</h2>
+    <div class="cards">
+      <article id="games" class="card">
+        <h3>Игры на PlayStation 5</h3>
+        <p>Список игр клуба есть в актуальном Instagram.</p>
+        <a class="text-link" href="https://www.instagram.com/stories/highlights/18130354628309292/" target="_blank" rel="noopener">Открыть список игр <span aria-hidden="true">↗</span></a>
+      </article>
+      <article id="rates" class="card">
+        <h3>Тарифы</h3>
+        <p>Актуальные цены клуб публикует в разделе Price List.</p>
+        <a class="text-link" href="https://www.instagram.com/stories/highlights/18131477794818628/" target="_blank" rel="noopener">Открыть прайс <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="card">
+        <h3>Турниры</h3>
+        <p>Анонсы и подробности в актуальном клуба.</p>
+        <a class="text-link" href="https://www.instagram.com/stories/highlights/18196675276353304/" target="_blank" rel="noopener">Смотреть турниры <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </section>
+  <section id="reviews" class="reviews" aria-labelledby="review-title">
+    <div class="wrap section">
+      <div class="review-heading">
+        <div>
+          <h2 id="review-title">Отзывы гостей</h2>
+          <p class="review-rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5,0 из 5</strong><span>3 оценки · 2 отзыва в 2ГИС</span></p>
+        </div>
+        <a class="btn outline" href="https://2gis.kz/karaganda/firm/70000001119120498/tab/reviews" target="_blank" rel="noopener">Все отзывы в 2ГИС <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="review-grid">
+        <figure class="review-card">
+          <blockquote>«Уютная атмосфера, хорошее оборудование, комфортные места и возможность отлично провести время с друзьями.»</blockquote>
+          <figcaption><strong>Dani R</strong><time datetime="2026-11-11">11 ноября 2026</time></figcaption>
+        </figure>
+        <figure class="review-card">
+          <blockquote>«Хорошая пс ка для своих денег советую»</blockquote>
+          <figcaption><strong>userr .</strong><time datetime="2026-11-10">10 ноября 2026</time></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section id="location" class="contact" aria-labelledby="address">
+    <div class="wrap">
+      <div>
+        <div class="tag">Как добраться</div>
+        <h2 id="address">Темиртау, 7-й микрорайон, 50</h2>
+        <p>Напишите в WhatsApp, на какой день и время хотите прийти и сколько вас будет.</p>
+      </div>
+      <div class="actions">
+        <a class="btn outline" href="https://2gis.kz/karaganda/firm/70000001119120498" target="_blank" rel="noopener">Открыть в 2ГИС <span aria-hidden="true">↗</span></a>
+        <a class="btn ice" href="https://wa.me/message/S4C2PEXGVIT2B1" target="_blank" rel="noopener">Написать в WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>SUBZERO GAME CLUB · Черновик сайта</span><a href="https://www.instagram.com/subzero.temirtau/" target="_blank" rel="noopener">@subzero.temirtau <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>
